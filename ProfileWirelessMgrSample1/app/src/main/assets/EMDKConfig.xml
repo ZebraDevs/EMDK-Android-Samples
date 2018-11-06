@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.--><wap-provisioningdoc>
+  <characteristic type="ProfileInfo">
+    <parm name="created_wizard_version" value="3.0.2"/>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="WirelessMgrProfile-1"/>
+    <parm name="ModifiedDate" value="2014-11-19 12:37:35"/>
+    <characteristic type="WirelessMgr" version="4.2">
+      <parm name="emdk_name" value=""/>
+      <parm name="Bluetooth" value="1"/>
+    </characteristic>
+  </characteristic>
+</wap-provisioningdoc>

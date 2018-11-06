@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLabelSelectSerialPort"
+        android:text="Select serial port" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabelSelectSerialPort"
+        android:id="@+id/spinnerPorts" />
+
+    <Space
+        android:layout_below="@id/spinnerPorts"
+        android:id="@+id/spaceAfterPort"
+        android:layout_width="wrap_content"
+        android:layout_height="20px" />
+
+
+
+    <TextView
+        android:layout_below="@id/spaceAfterPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblWriteDataToSend"
+        android:text="Write data to send" />
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_below="@id/lblWriteDataToSend"
+        android:id="@+id/txtDataToSend"
+        android:text="Serial Communication Write Data Testing."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_weight="1"
+        android:selectAllOnFocus="false"
+        android:singleLine="false" />
+
+
+
+
+    <Space
+        android:layout_below="@id/txtDataToSend"
+        android:id="@+id/spaceBeforeButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="20px" />
+
+    <LinearLayout
+        android:layout_below="@id/spaceBeforeButtons"
+        android:id="@+id/layoutButtons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:weightSum="1.0">
+
+        <Button
+            android:text="Write"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:onClick="btnWriteOnClick"
+            android:id="@+id/btnWrite" />
+
+        <Button
+            android:text="Read"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:onClick="btnReadOnClick"
+            android:id="@+id/btnRead" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_below="@id/layoutButtons"
+        android:id="@+id/spaceAfterButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="20px" />
+
+    <TextView
+        android:layout_below="@id/spaceAfterButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblStatus"
+        android:text="Status:" />
+
+    <TextView
+        android:layout_below="@id/lblStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStatus"
+        android:text="" />
+
+
+
+</RelativeLayout>

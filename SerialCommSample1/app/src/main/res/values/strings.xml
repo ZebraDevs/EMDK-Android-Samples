@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SerialCommSample1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="statusData">Status:</string>
+    <string name="buttonWrite">Write</string>
+    <string name="buttonRead">Read</string>
+    <string name="statusTitle">Status:</string>
+    <string name="editBoxTitle">Write Data:</string>
+
+</resources>
+
+

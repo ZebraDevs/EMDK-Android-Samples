@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.symbol.notificationsample1.MainActivity">
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                >
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Notification Device" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TableRow01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <Spinner
+                            android:id="@+id/spnNotificationDevice"
+                            android:layout_width="510sp"
+                            android:layout_height="wrap_content" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow
+                        android:id="@+id/TableRow02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/TextView01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select LED Pattern" />
+
+                        <TextView
+                            android:id="@+id/txtSpacer1"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/TextView02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select LED Color" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <Spinner
+                            android:id="@+id/spnLEDPattern"
+                            android:layout_width="230sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/txtSpacer2"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                        <Spinner
+                            android:id="@+id/spnLEDColor"
+                            android:layout_width="230sp"
+                            android:layout_height="wrap_content" />
+
+                    </TableRow>
+                </TableLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*" >
+
+                    <TableRow
+                        android:id="@+id/TableRow03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/TextView04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Beep Pattern" />
+                        <TextView
+                            android:id="@+id/txtSpacer4"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                        <TextView
+                            android:id="@+id/TextView03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Vibrator Pattern" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TableRow05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <Spinner
+                            android:id="@+id/spnBeepPattern"
+                            android:layout_width="230sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/txtSpacer5"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                        <Spinner
+                            android:id="@+id/spnVibratePattern"
+                            android:layout_width="230sp"
+                            android:layout_height="wrap_content" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*" >
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:id="@+id/TableRow06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/txtStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status: Please wait.." />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+
+                        <Button
+                            android:id="@+id/btnNotify"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClickNotify"
+                            android:text="@string/btnTxtNotify"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnCancelNotification"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClickCancel"
+                            android:text="@string/btnTxtCancel"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnDeviceInfo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClickDeviceInfo"
+                            android:text="@string/btnTxtDeviceInfo"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnReConnect"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="onClickReconnect"
+                            android:text="@string/btnTxtReconnect"
+                            android:textSize="14sp" />
+
+
+                    </TableRow>
+                </TableLayout>
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

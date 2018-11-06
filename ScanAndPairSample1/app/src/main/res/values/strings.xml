@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ScanAndPair Sample1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pairButton">Pair</string>
+    <string name="unpairButton">Unpair</string>
+    <string name="alwaysScan">Always Scan</string>
+    <string name="scanDataType">ScanData Type:</string>
+    <string name="deviceName">Bluetooth Name:</string>
+    <string name="macAddress">Bluetooth Address:</string>
+    <string name="deviceNameHint">MPOS-64001019</string>
+    <string name="macAddressHint">8C:DE:52:12:A2:56</string>
+    <string name="statusText">Status:</string>
+    <string name="useHardTrigger">Hard Trigger</string>
+
+</resources>

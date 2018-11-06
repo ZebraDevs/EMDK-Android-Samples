@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget37"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <CheckBox
+        android:id="@+id/ChecBoxfastcharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="34dp"
+        android:text="Fast Charge" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="155dp"
+        android:layout_y="34dp"
+        android:text="Smooth Effect" />
+
+    <Button
+        android:id="@+id/CradleInfoButton1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="102dp"
+        android:text="Cradle Info" />
+
+    <Button
+        android:id="@+id/Diagnosticdata"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="102dp"
+        android:text="Diagnostic Info" />
+
+    <Button
+        android:id="@+id/UnlockButton1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="188dp"
+        android:text="Cradle Unlock" />
+
+    <Button
+        android:id="@+id/FlashLEDButton1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="188dp"
+        android:text="Cradle Flash LED&apos;s" />
+
+    <TextView
+        android:id="@+id/PStextView"
+        android:layout_width="270dp"
+        android:layout_height="127dp"
+        android:layout_x="28dp"
+        android:layout_y="296dp" />
+
+</AbsoluteLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="triggerItems">
+        <item>HARD</item>
+        <item>SOFT</item>
+    </string-array>
+</resources>

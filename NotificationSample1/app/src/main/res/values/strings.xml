@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NotificationSample1</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btnTxtNotify">Notify</string>
+    <string name="btnTxtCancel">Cancel</string>
+    <string name="btnTxtDeviceInfo">Device Info</string>
+    <string name="btnTxtReconnect">Re-connect</string>
+</resources>

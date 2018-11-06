@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:dialogTitle="Select template"
+        android:key="@string/pref_key"
+        android:title="Set Template" />
+
+    <EditTextPreference
+        android:defaultValue="15000"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number"
+        android:key="timeout_identification"
+        android:summary="Set the identification timeout"
+        android:title="Identification Timeout" />
+    <EditTextPreference
+        android:defaultValue="10000"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number"
+        android:key="timeout_processing"
+        android:summary="Set the processing timeout"
+        android:title="Processing Timeout" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="ui_result_confirmation"
+        android:summary="Show results view before sending results back to application"
+        android:title="Display Results View" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="auto_capture"
+        android:summary="If true, form will be captured automatically when detected"
+        android:title="Automatic Image Capture" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="feedback_audio"
+        android:summary="If true, turns on audio feedback"
+        android:title="Audio Feedback" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="feedback_haptic"
+        android:summary="If true, turns on haptic feedback"
+        android:title="Haptic Feedback" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="feedback_led"
+        android:summary="If true, turns on LED feedback"
+        android:title="LED Feedback" />
+
+</PreferenceScreen>

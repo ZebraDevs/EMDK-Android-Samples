@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textViewAPNAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select APN Action:" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:dividerPadding="@dimen/button_pad"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:checked="true"
+                android:height="@dimen/button_pad"
+                android:text="Add/Replace named APN"
+                android:textSize="14dp" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:height="@dimen/button_pad"
+                android:text="Remove existing named APN"
+                android:textSize="14dp" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignRight="@+id/EditTextPassword"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignRight="@+id/TextViewPassword"
+        android:layout_below="@+id/buttonSet"
+        android:textSize="14dp"
+        android:text="Status:" />
+
+    <EditText
+        android:id="@+id/EditTextAccessPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewAccessPoint"
+        android:layout_toRightOf="@+id/textViewAccessPoint"
+        android:layout_alignLeft="@+id/buttonSet"
+        android:textSize="14dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextViewUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAccessPoint"
+        android:layout_below="@+id/textViewAccessPoint"
+        android:layout_marginTop="4dp"
+        android:text="User Name:" />
+
+    <Button
+        android:id="@+id/buttonSet"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Apply" />
+
+    <EditText
+        android:id="@+id/EditTextUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextViewUserName"
+        android:layout_toRightOf="@+id/TextViewUserName"
+        android:layout_marginLeft="16dp"
+        android:textSize="14dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextViewUserName"
+        android:layout_below="@+id/TextViewUserName"
+        android:layout_marginTop="4dp"
+        android:text="Password:" />
+
+    <EditText
+        android:id="@+id/EditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextViewPassword"
+        android:layout_toRightOf="@+id/TextViewPassword"
+        android:layout_marginLeft="22dp"
+        android:textSize="14dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textViewAPN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="14dp"
+        android:text="APN Name:" />
+
+    <EditText
+        android:id="@+id/editTextAPN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditTextUserName"
+        android:layout_toRightOf="@+id/textViewAPN"
+        android:layout_alignBottom="@+id/textViewAPN"
+        android:textSize="14dp"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/checkBoxReplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxMakeDefault"
+        android:layout_below="@+id/textViewAPN"
+        android:text="Replace if exist"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/textViewAccessPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxMakeDefault"
+        android:layout_below="@+id/checkBoxMakeDefault"
+        android:layout_marginTop="2dp"
+        android:text="Access Point:" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMakeDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAPN"
+        android:layout_alignTop="@+id/checkBoxReplace"
+        android:layout_marginTop="22dp"
+        android:text="Make Default APN"
+        android:textSize="14dp" />
+
+</RelativeLayout>
