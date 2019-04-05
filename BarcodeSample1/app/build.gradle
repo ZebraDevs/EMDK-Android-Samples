@@ -3,10 +3,10 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.symbol.barcodesample1"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 12
-        versionName "7.0.2"
+        versionName "7.3.1"
     }
     buildTypes {
         release {
@@ -16,6 +16,6 @@ android {
     }
 }
 dependencies {
-    implementation 'com.symbol:emdk:+'
+    compileOnly 'com.symbol:emdk:+'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }

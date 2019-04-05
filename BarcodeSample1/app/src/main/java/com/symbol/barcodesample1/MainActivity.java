@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015-2018 Zebra Technologies Corp
+ * Copyright (C) 2015-2019 Zebra Technologies Corporation and/or its affiliates
  * All rights reserved.
  */
 package com.symbol.barcodesample1;
@@ -289,6 +289,18 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
         if (scanner != null) {
             try{
                 scanner.disable();
+            } catch (Exception e) {
+                updateStatus(e.getMessage());
+            }
+
+            try {
+                scanner.removeDataListener(this);
+                scanner.removeStatusListener(this);
+            } catch (Exception e) {
+                updateStatus(e.getMessage());
+            }
+
+            try{
                 scanner.release();
             } catch (Exception e) {
                 updateStatus(e.getMessage());
