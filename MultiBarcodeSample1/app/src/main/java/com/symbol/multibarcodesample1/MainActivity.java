@@ -1,7 +1,7 @@
 /*
-* Copyright (C) 2018 Zebra Technologies Corp
-* All rights reserved.
-*/
+ * Copyright (C) 2015-2019 Zebra Technologies Corporation and/or its affiliates
+ * All rights reserved.
+ */
 package com.symbol.multibarcodesample1;
 
 import java.util.ArrayList;
@@ -388,7 +388,10 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
                 ScannerConfig config = scanner.getConfig();
 
                 // Scan Mode set to Multi Barcode
+                // If it is a imager
                 config.readerParams.readerSpecific.imagerSpecific.scanMode = ScannerConfig.ScanMode.MULTI_BARCODE;
+                // If it is a camera
+                config.readerParams.readerSpecific.cameraSpecific.scanMode = ScannerConfig.ScanMode.MULTI_BARCODE;
 
                 // Setting the barcode count
                 if(barcodeCount.getText().toString().length() > 0) {

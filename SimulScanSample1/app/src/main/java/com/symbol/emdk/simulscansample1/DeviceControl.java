@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2015-2017 Zebra Technologies Corp
+* Copyright (C) 2015-2019 Zebra Technologies Corporation and/or its affiliates
 * All rights reserved.
 */
 package com.symbol.emdk.simulscansample1;
@@ -23,6 +23,7 @@ import com.symbol.emdk.simulscan.SimulScanReaderInfo;
 import com.symbol.emdk.simulscan.SimulScanStatusData;
 import com.symbol.emdk.EMDKResults;
 
+import android.app.Application;
 import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
@@ -39,6 +40,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DeviceControl extends Fragment implements OnItemSelectedListener,
         EMDKListener, DataListerner, StatusListerner, OnClickListener {
@@ -297,6 +299,10 @@ public class DeviceControl extends Fragment implements OnItemSelectedListener,
             Log.e(TAG, "Get SimulScanManager instance failed!");
             textViewStatus.setText("Status: "
                     + "Get SimulScanManager instance failed!");
+
+            Toast.makeText(getActivity(), "SimulScan feature is not supported", Toast.LENGTH_SHORT).show();
+            getActivity().finish();
+
             return;
         }
 

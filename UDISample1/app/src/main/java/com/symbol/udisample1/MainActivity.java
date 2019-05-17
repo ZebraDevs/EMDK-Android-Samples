@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017 Zebra Technologies Corp
+* Copyright (C) 2017-2019 Zebra Technologies Corporation and/or its affiliates
 * All rights reserved.
 */
 package com.symbol.udisample1;

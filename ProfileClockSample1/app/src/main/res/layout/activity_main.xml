@@ -8,12 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical" >
 
         <TextView
@@ -27,7 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" >
-
             <requestFocus />
         </EditText>
 
@@ -57,32 +57,31 @@
             android:ems="10"
             android:inputType="time" />
 
+
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/buttonSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Set" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Status:" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4" />
+
     </LinearLayout>
+    </ScrollView>
 
-    <TextView
-        android:id="@+id/textViewStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_below="@+id/textView4" />
-
-    <Button
-        android:id="@+id/buttonSet"
-        android:layout_width="108dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Set" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/buttonSet"
-        android:layout_marginTop="14dp"
-        android:text="Status:" />
 
 </RelativeLayout>

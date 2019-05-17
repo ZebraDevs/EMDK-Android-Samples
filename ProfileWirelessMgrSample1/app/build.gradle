@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.symbol.profilewirelessmgrsample1"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 10
-        versionName "7.0.0"
+        versionName "7.3.0"
     }
     buildTypes {
         release {
@@ -17,5 +17,5 @@ android {
     }
 }
 dependencies {
-    implementation 'com.symbol:emdk:+'
+    compileOnly 'com.symbol:emdk:+'
 }

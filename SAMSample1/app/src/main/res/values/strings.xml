@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SAMSample1</string>
+    <string name="get_sam_info">Get SAM Info</string>
+    <string name="status">Status:</string>
+    <string name="place_card_message">Place your NFC card closer to the device to auto detect and connect to the SAM</string>
+    <string name="message_nfc_not_supported">NFC not supported</string>
+    <string name="message_sam_connected_successfully">Connected to SAM: </string>
+    <string name="message_sam_exception_enumerate">SAMException occurred while enumerating SAMs</string>
+    <string name="message_failed_to_get_sams">Failed to get the list of present SAMs! Please make sure you have any SAMs inserted</string>
+    <string name="message_connect_error">Connect error:</string>
+    <string name="message_transceive_failed">Transceive Failed:</string>
+    <string name="message_transceive">Sending get version transceive command</string>
+    <string name="version">Version:</string>
+    <string name="version_error">Version Error</string>
+    <string name="message_disconnecting">Disconnecting from SAM:</string>
+    <string name="message_tag_not_compatible">This tag is NOT compatible with any of the present SAMs</string>
+    <string name="message_tag_compatible">This tag is compatible with SAM:</string>
+    <string name="message_tag_detected">Tag detected</string>
+</resources>

@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2015-2018 Zebra Technologies Corp
+* Copyright (C) 2015-2019 Zebra Technologies Corporation and/or its affiliates
 * All rights reserved.
 */
 package com.symbol.personalshoppersample1;
@@ -349,8 +349,8 @@ public class MainActivity extends Activity implements EMDKListener {
         }
 
         if (PsObject == null) {
-            textViewStatus.setText("Status: " + "PersonalShopper Feature NOT supported");
-            disableUI();
+            Toast.makeText(this, "PersonalShopper feature is NOT supported", Toast.LENGTH_LONG).show();
+            finish();
         }
         else
         {

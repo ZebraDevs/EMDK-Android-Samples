@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2015-2017 Zebra Technologies Corp
+* Copyright (C) 2015-2019 Zebra Technologies Corporation and/or its affiliates
 * All rights reserved.
 */
 package com.symbol.serialcommsample1;
@@ -27,6 +27,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -198,6 +200,8 @@ public class MainActivity extends Activity implements EMDKListener {
                 else
                 {
                     new AsyncStatusUpdate().execute("Failed to get available ports");
+                    Toast.makeText(this, "Failed to get available ports, serial communication may not be supported.", Toast.LENGTH_LONG).show();
+                    finish();
                 }
             }
             else

@@ -8,6 +8,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
@@ -75,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textViewAccessPoint"
         android:layout_toRightOf="@+id/textViewAccessPoint"
-        android:layout_alignLeft="@+id/buttonSet"
+        android:layout_marginLeft="16dp"
         android:textSize="14dp"
         android:ems="10" />
 
@@ -174,5 +185,6 @@
         android:layout_marginTop="22dp"
         android:text="Make Default APN"
         android:textSize="14dp" />
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
