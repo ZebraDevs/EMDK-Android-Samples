@@ -1,0 +1,606 @@
+# For most projects, this workflow file will not need changing; you simply need
+# to commit it to your repository.
+#
+# You may wish to alter this file to override the set of languages analyzed,
+# or to provide custom queries or build logic.
+#
+# ******** NOTE ********
+# We have attempted to detect the languages in your repository. Please check
+# the `language` matrix defined below to confirm you have the correct set of
+# supported CodeQL languages.
+#
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "master" ]
+  schedule:
+    - cron: '18 18 * * 5'
+
+jobs:
+  analyze_barcodesample1:
+    name: Analyze BarcodeSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/BarcodeSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble BarcodeSample1 debug build..."
+       cd ./BarcodeSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for BarcodeSample1
+      uses: github/codeql-action/analyze@v2
+
+
+  analyze_multibarcodesample1:
+    name: Analyze MultiBarcodeSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/MultiBarcodeSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble MultiBarcodeSample1 debug build..."
+       cd ./MultiBarcodeSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for MultiBarcodeSample1
+      uses: github/codeql-action/analyze@v2
+      
+
+  analyze_notificationsample1:
+    name: Analyze NotificationSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/NotificationSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble NotificationSample1 debug build..."
+       cd ./NotificationSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for NotificationSample1
+      uses: github/codeql-action/analyze@v2
+      
+  
+  analyze_personalshoppersample1:
+    name: Analyze PersonalShopperSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/PersonalShopperSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble PersonalShopperSample1 debug build..."
+       cd ./PersonalShopperSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for PersonalShopperSample1
+      uses: github/codeql-action/analyze@v2
+      
+  
+  analyze_profileappmgrsample1:
+    name: Analyze ProfileAppMgrSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfileAppMgrSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfileAppMgrSample1 debug build..."
+       cd ./ProfileAppMgrSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfileAppMgrSample1
+      uses: github/codeql-action/analyze@v2
+  
+  
+  analyze_profileclocksample1:
+    name: Analyze ProfileClockSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfileClockSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfileClockSample1 debug build..."
+       cd ./ProfileClockSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfileClockSample1
+      uses: github/codeql-action/analyze@v2
+  
+  
+  
+  analyze_profilegprsmgrsample1:
+    name: Analyze ProfileGprsMgrSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfileGprsMgrSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfileGprsMgrSample1 debug build..."
+       cd ./ProfileGprsMgrSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfileGprsMgrSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_profilepowermgrsample1:
+    name: Analyze ProfilePowerMgrSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfilePowerMgrSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfilePowerMgrSample1 debug build..."
+       cd ./ProfilePowerMgrSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfilePowerMgrSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_profilewifisample1:
+    name: Analyze ProfileWifiSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfileWifiSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfileWifiSample1 debug build..."
+       cd ./ProfileWifiSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfileWifiSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_profilewirelessmgrsample1:
+    name: Analyze ProfileWirelessMgrSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ProfileWirelessMgrSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ProfileWirelessMgrSample1 debug build..."
+       cd ./ProfileWirelessMgrSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ProfileWirelessMgrSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_samsample1:
+    name: Analyze SAMSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/SAMSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble SAMSample1 debug build..."
+       cd ./SAMSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for SAMSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_scanandpairsample1:
+    name: Analyze ScanAndPairSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/ScanAndPairSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble ScanAndPairSample1 debug build..."
+       cd ./ScanAndPairSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for ScanAndPairSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_serialcommsample1:
+    name: Analyze SerialCommSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/SerialCommSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble SerialCommSample1 debug build..."
+       cd ./SerialCommSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for SerialCommSample1
+      uses: github/codeql-action/analyze@v2
+      
+      
+  analyze_simulscansample1:
+    name: Analyze SimulScanSample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/SimulScanSample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble SimulScanSample1 debug build..."
+       cd ./SimulScanSample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for SimulScanSample1
+      uses: github/codeql-action/analyze@v2
+      
+  analyze_udisample1:
+    name: Analyze UDISample1 project sources
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        source-root: /home/runner/work/EMDK-Android-Samples/EMDK-Android-Samples/UDISample1/
+        
+        # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+        # queries: security-extended,security-and-quality
+
+    - run: |
+       echo "Assemble UDISample1 debug build..."
+       cd ./UDISample1
+       ./gradlew clean --continue assembleDebug || true
+       cd ..
+      
+    - name: Perform CodeQL Analysis for UDISample1
+      uses: github/codeql-action/analyze@v2
